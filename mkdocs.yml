@@ -14,8 +14,8 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
-  logo: assets/logo-placeholder.svg
-  favicon: assets/favicon-placeholder.svg
+  logo: assets/torizon.png
+  favicon: assets/torizon.svg
   font:
     text: Inter
     code: JetBrains Mono
@@ -29,8 +29,8 @@ theme:
   # palette list with per-entry `media` + `toggle` blocks.
   palette:
     scheme: slate
-    primary: teal
-    accent: deep orange
+    primary: indigo
+    accent: green
 
 markdown_extensions:
   - admonition
