@@ -42,6 +42,7 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Architecture & Migration: architecture-migration.md
   - Building Torizon OS: building-torizon.md
   - Common Torizon (per-vendor):
       - Intel x86-64: common-torizon/README-x86.md

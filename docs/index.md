@@ -16,6 +16,9 @@ Together they build two distinct Torizon OS flavors:
 - **Torizon** — built on top of Toradex's BSP.
 - **Common Torizon** — built on top of BSPs from third parties.
 
+New here, or upgrading from the single `meta-toradex-torizon` layer? See
+[Architecture & Migration](architecture-migration.md).
+
 ## Building
 
 - To build **Torizon OS** on Toradex hardware, see [Building Torizon OS](building-torizon.md).
