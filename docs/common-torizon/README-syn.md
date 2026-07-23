@@ -4,7 +4,7 @@ Setup
 2. Initialize and sync the repo manifest for Synaptics:
 ```bash
 $ mkdir common-torizon; cd common-torizon
-$ repo init -u https://git.toradex.com/toradex-manifest.git -b scarthgap-7.x.y -m common-torizon/syn/integration.xml
+$ repo init -u https://git.toradex.com/toradex-manifest.git -b master -m common-torizon/syn/integration.xml
 $ repo sync -j 10
 ```
 
@@ -14,7 +14,7 @@ $ repo sync -j 10
 Note that `integration.xml` is a development manifest used internally and it might contain development features and thus be considered unstable.
 
 > [!IMPORTANT]
-> Common Torizon OS is only available on branches `scarthgap-7.x.y` or newer!
+> Common Torizon OS is only available on the `master` branch.
 
 Alternatively, you can manually clone all layers one by one. Refer to the section [_Manual Setup_](#manual-setup) at the end of this document to learn how.
 
@@ -120,7 +120,7 @@ $ git clone https://github.com/synaptics-astra/sdk.git -b scarthgap_6.12_v2.1.0 
   * Download `meta-torizon`, `meta-torizon-bsp` and their dependencies:
 ```bash
 $ cd layers
-$ git clone https://github.com/torizon/meta-torizon.git -b scarthgap-7.x.y
+$ git clone https://github.com/torizon/meta-torizon.git -b master
 $ git clone https://github.com/torizon/meta-torizon-bsp.git -b master
 $ git clone https://github.com/uptane/meta-updater.git -b scarthgap
 ```

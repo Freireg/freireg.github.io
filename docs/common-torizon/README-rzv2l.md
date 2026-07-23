@@ -7,7 +7,7 @@ $ cd rz-community-bsp
 ```
 2. Clone the Torizon layers into the `rz-community-bsp` folder
 ```
-$ git clone https://github.com/torizon/meta-torizon.git -b scarthgap-7.x.y
+$ git clone https://github.com/torizon/meta-torizon.git -b master
 $ git clone https://github.com/torizon/meta-torizon-bsp.git -b master
 ```
 3. Clone Torizon dependencies into `rz-community-bsp`

@@ -46,6 +46,17 @@ the pre-split layer**.
 
 ## How they fit together in a build
 
+```text
+        meta-torizon-bsp            (BSP adaptation layer)
+               │  LAYERDEPENDS = "meta-torizon"
+               │  BBFILES_DYNAMIC → vendor BSP collections
+               ▼
+          meta-torizon              (distro layer)
+               │  LAYERDEPENDS = "sota virtualization-layer"
+               ▼
+   meta-updater · meta-virtualization · meta-toradex-distro · poky
+```
+
 - **`meta-torizon`** — collection `meta-torizon`, priority `90`, depends on
   `sota` + `virtualization-layer`.
 - **`meta-torizon-bsp`** — collection `meta-torizon-bsp`, priority `91`, depends

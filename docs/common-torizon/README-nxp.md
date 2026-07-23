@@ -4,7 +4,7 @@ Setup
 2. Initialize and sync the repo manifest for NXP:
 ```bash
 $ mkdir common-torizon; cd common-torizon
-$ repo init -u https://git.toradex.com/toradex-manifest.git -b scarthgap-7.x.y -m common-torizon/nxp/default.xml
+$ repo init -u https://git.toradex.com/toradex-manifest.git -b master -m common-torizon/nxp/default.xml
 $ repo sync -j 10
 ```
 We **strongly recommend** using the `default.xml` manifest. The `integration.xml` and `next.xml` are development manifests used internally and they might be unstable.
@@ -72,7 +72,7 @@ $ repo sync -j 10
 ```
 3. Clone the `meta-torizon` and `meta-torizon-bsp` layers, and their dependencies:
 ```bash
-$ git clone https://github.com/torizon/meta-torizon.git -b scarthgap-7.x.y sources/meta-torizon
+$ git clone https://github.com/torizon/meta-torizon.git -b master sources/meta-torizon
 $ git clone https://github.com/torizon/meta-torizon-bsp.git -b master sources/meta-torizon-bsp
 $ git clone https://github.com/uptane/meta-updater.git -b scarthgap sources/meta-updater
 $ ln -s sources/meta-torizon-bsp/scripts/setup-environment torizon-setup-environment
