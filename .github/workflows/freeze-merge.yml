@@ -1,0 +1,17 @@
+name: Block Labeled PR Merges
+
+on:
+  pull_request:
+    types: [labeled, unlabeled, opened, edited, synchronize]
+
+jobs:
+  prevent-merge:
+    if: ${ contains(github.event.*.labels.*.name, 'freeze') }
+    name: Prevent Merging
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for label
+        run: |
+          echo "Pull request label prevents merging."
+          echo "Remove the freeze label to skip this check."
+          exit 1
