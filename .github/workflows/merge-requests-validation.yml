@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Check for label
         run: |
-          echo "Pull request label prevents merging."
+          echo "Pull request label prevents merging"
           echo "Remove the freeze label to skip this check."
           exit 1
 
