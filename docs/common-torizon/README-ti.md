@@ -4,13 +4,13 @@ Setup
 2. Initialize and sync the repo manifest for Texas Instruments:
 ```bash
 $ mkdir common-torizon; cd common-torizon
-$ repo init -u https://git.toradex.com/toradex-manifest.git -b scarthgap-7.x.y -m common-torizon/ti/default.xml
+$ repo init -u https://git.toradex.com/toradex-manifest.git -b master -m common-torizon/ti/default.xml
 $ repo sync -j 10
 ```
 We **strongly recommend** using the `default.xml` manifest. The `integration.xml` and `next.xml` are development manifests used internally and they might be unstable.
 `default.xml` is the manifest used for our releases, so they are reliable.  
 > [!IMPORTANT]  
-> Common Torizon OS is only available on branches `scarthgap-7.x.y` or newer!
+> Common Torizon OS is only available on the `master` branch.
 
 Alternatively, you can manually clone all layers one by one. Refer to the section _Manual Setup_ at the end of this document to learn how.
 
@@ -78,7 +78,7 @@ $ git clone https://git.yoctoproject.org/openembedded-core -b scarthgap oe-core
 ```
   * Download `meta-torizon`, `meta-torizon-bsp` and their dependencies:
 ```bash
-$ git clone https://github.com/torizon/meta-torizon.git -b scarthgap-7.x.y
+$ git clone https://github.com/torizon/meta-torizon.git -b master
 $ git clone https://github.com/torizon/meta-torizon-bsp.git -b master
 $ git clone https://github.com/uptane/meta-updater.git -b scarthgap
 $ git clone https://git.yoctoproject.org/meta-virtualization -b scarthgap

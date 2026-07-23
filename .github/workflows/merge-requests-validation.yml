@@ -1,13 +1,21 @@
-name: Backport merged pull request
-on:
-  pull_request_target:
-    types: [closed, labeled]
+name: Block Labeled PR Merges
 
-permissions:
-  contents: write
-  pull-requests: write
+on:
+  pull_request:
+    types: [labeled, unlabeled, opened, edited, synchronize]
 
 jobs:
+  prevent-merge:
+    if: ${{ contains(github.event.pull_request.labels.*.name, 'freeze') }}
+    name: Check for freeze label
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for label
+        run: |
+          echo "Pull request label prevents merging."
+          echo "Remove the freeze label to skip this check."
+          exit 1
+
   backport:
     name: Backport PR
     runs-on: ubuntu-latest

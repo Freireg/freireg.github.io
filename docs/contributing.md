@@ -13,8 +13,7 @@ Toradex team or an external contributor.
 - Make a fork of the relevant repository.
 - Create a new development branch in it.
 - Make your changes in the new branch and commit them.
-- Open a pull request to the default branch (for `meta-torizon`, currently
-  `scarthgap-7.x.y`; for `meta-torizon-bsp`, `master`).
+- Open a pull request to the default branch.
 - Open a second pull request to the `master` branch, unless not applicable.
 
 Reviewers are automatically assigned based on each repository's `docs/CODEOWNERS`
