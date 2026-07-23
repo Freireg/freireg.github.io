@@ -6,7 +6,7 @@ on:
 
 jobs:
   prevent-merge:
-    if: ${ contains(github.event.*.labels.*.name, 'freeze') }
+    if: ${{ contains(github.event.pull_request.labels.*.name, 'freeze') }}
     name: Check for freeze label
     runs-on: ubuntu-latest
     steps:
